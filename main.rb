@@ -4,11 +4,8 @@ require_relative './dice'
 
 def main
   dice = Dice.new
-  dice.rolls.each do |roll|
-    p roll
-    puts "うんこ: #{dice.うんこ?(roll)}"
-    puts '----'
-  end
+  rolls = dice.rolls(5)
+  p Dice.うんこ率(rolls)
 end
 
 

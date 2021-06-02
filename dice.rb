@@ -9,19 +9,26 @@ class Dice
     @cells = Dice.cells
   end
 
-  def rolls
-    @cells.repeated_permutation(5).to_a
+  def rolls(n)
+    @cells.repeated_permutation(n).to_a
   end
 
-  def うんこ?(roll)
+  def self.うんこ?(roll)
     return false unless roll.include?('う')
     return false unless roll.include?('ん')
     return false unless roll.include?('こ')
     return true
   end
 
-  def うんこ率
-    rolls.inclue?
+  def self.うんこ率(rolls)
+    denominator = rolls.size
+    numerator = 0
+    rolls.each do |roll|
+      if Dice.うんこ?(roll)
+        numerator += 1
+      end
+    end
+    Rational(denominator, numerator)
   end
 
   def うんち
