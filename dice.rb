@@ -20,7 +20,7 @@ class Dice
     return true
   end
 
-  def self.うんこ率(rolls)
+  def self.うんこ確率(rolls)
     numerator = 0
     rolls.each do |roll|
       if Dice.うんこ?(roll)
