@@ -30,6 +30,8 @@ class Dice
     end
 
     denominator = rolls.size
+    puts "分子: #{numerator}"
+    puts "分母: #{denominator}"
     Rational(numerator, denominator)
   end
 
@@ -82,7 +84,13 @@ class Dice
   end
 
   def self.おちんちん?(roll)
-    self.んこ?('おちんちん', roll)
+    tally = roll.tally
+    return false unless roll.include?('お')
+    return false unless tally['ち']
+    return false if 2 > tally['ち']
+    return false unless tally['ん']
+    return false if 2 > tally['ん']
+    return true
   end
 
   def self.おちんちん確率(rolls)
