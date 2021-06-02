@@ -10,7 +10,7 @@ class Dice
   end
 
   def rolls
-    @cells.permutation(5).to_a
+    @cells.repeated_permutation(5).to_a
   end
 
   def うんこ?(roll)
@@ -20,7 +20,7 @@ class Dice
     return true
   end
 
-  def うんこ
+  def うんこ率
     rolls.inclue?
   end
 
