@@ -41,7 +41,7 @@ class Dice
     self.んこ確率('うんこ', rolls)
   end
 
-  def うんち?(roll)
+  def self.うんち?(roll)
     self.んこ?('うんち', roll)
   end
 
@@ -49,7 +49,7 @@ class Dice
     self.んこ確率('うんち', rolls)
   end
   
-  def ちんこ?
+  def self.ちんこ?(roll)
     self.んこ?('ちんこ', roll)
   end
 
@@ -57,7 +57,7 @@ class Dice
     self.んこ確率('ちんこ', rolls)
   end
 
-  def まんこ?
+  def self.まんこ?(roll)
     self.んこ?('まんこ', roll)
   end
 
@@ -65,7 +65,7 @@ class Dice
     self.んこ確率('まんこ', rolls)
   end
 
-  def おまんこ?
+  def self.おまんこ?(roll)
     self.んこ?('おまんこ', roll)
   end
 
@@ -73,7 +73,7 @@ class Dice
     self.んこ確率('おまんこ', rolls)
   end
 
-  def おちんこ?
+  def self.おちんこ?(roll)
     self.んこ?('おちんこ', roll)
   end
 
@@ -81,7 +81,7 @@ class Dice
     self.んこ確率('おちんこ', rolls)
   end
 
-  def おちんちん?
+  def self.おちんちん?(roll)
     self.んこ?('おちんちん', roll)
   end
 
