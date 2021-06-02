@@ -21,14 +21,15 @@ class Dice
   end
 
   def self.うんこ率(rolls)
-    denominator = rolls.size
     numerator = 0
     rolls.each do |roll|
       if Dice.うんこ?(roll)
         numerator += 1
       end
     end
-    Rational(denominator, numerator)
+
+    denominator = rolls.size
+    Rational(numerator, denominator)
   end
 
   def うんち

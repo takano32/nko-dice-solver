@@ -5,6 +5,7 @@ require_relative './dice'
 def main
   dice = Dice.new
   rolls = dice.rolls(5)
+  puts rolls.size
   p Dice.うんこ率(rolls)
 end
 
